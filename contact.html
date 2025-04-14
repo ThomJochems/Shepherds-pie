@@ -17,18 +17,24 @@
   </header>
 
   <main>
-    <form action="https://formspree.io/f/yourformid" method="POST">
-      <label>Your Name:
-        <input type="text" name="name" required>
-      </label>
-      <label>Your Email:
-        <input type="email" name="email" required>
-      </label>
-      <label>Your Message:
-        <textarea name="message" rows="5" required></textarea>
-      </label>
-      <button type="submit">Send</button>
+    <form action="https://formsubmit.co/thom.jochems@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Nieuw bericht via de website!" />
+      <input type="hidden" name="_next" value="https://thomjochems.github.io/Shepherds-pie/index.html" />
+      <input type="hidden" name="_template" value="table" />
+      <!-- <input type="hidden" name="_cc" value="extra@example.com,andere@example.com" /> -->
+      
+      <label for="naam">Naam:</label>
+      <input type="text" name="naam" required />
+    
+      <label for="email">E-mailadres:</label>
+      <input type="email" name="email" required />
+    
+      <label for="bericht">Bericht:</label>
+      <textarea name="bericht" required></textarea>
+    
+      <button type="submit">Verstuur</button>
     </form>
+    
   </main>
 
   <footer>
