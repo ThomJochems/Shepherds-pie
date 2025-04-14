@@ -2,12 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Agenda – Shepherd’s Pie</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Agenda – Shepherd's Pie</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Upcoming Events</h1>
+    <img src="images/banner.jpg" alt="Band banner" class="banner" />
+    <h1>Shepherd's Pie</h1>
     <nav>
       <a href="index.html">Home</a>
       <a href="agenda.html">Agenda</a>
@@ -17,9 +19,26 @@
   </header>
 
   <main>
-    <iframe src="https://calendar.google.com/calendar/embed?src=yourcalendarid%40group.calendar.google.com&ctz=Europe/Amsterdam"
-            style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
-    <p>Includes: date, time, location, cost & if it's public or private.</p>
+    <h2>Agenda</h2>
+    <table class="agenda">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Location</th>
+          <th>Price</th>
+          <th>Open?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>April 27, 2025</td>
+          <td>19:30</td>
+          <td>Dublin Folk Club</td>
+          <td>€10</td>
+          <td>Yes</td>
+        </tr>
+    </table>
   </main>
 
   <footer>
