@@ -49,18 +49,12 @@ body {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
   }
   
-  h1 a {
+  h1 {
     margin-top: 0.5em;
     font-size: 2.5em;
-    color: #3a4d2d;
+    color: #4f774f;
   }
   
-  h1 b {
-    margin-top: 0.5em;
-    font-size: 3 em;
-    color: #ffffff;
-  }
-
   h2 {
     color: #3a4d2d;
   }
