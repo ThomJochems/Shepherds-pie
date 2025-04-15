@@ -15,11 +15,13 @@ body {
   
   .banner {
     width: 100%;
+    height: auto;
     max-height: 300px;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   }
+  
   
   
   nav {
