@@ -52,13 +52,17 @@ body {
   h1 {
     margin-top: 0.5em;
     font-size: 2.5em;
-    color: #4f774f;
+    color: #fdf4dc;
   }
   
   h2 {
     color: #3a4d2d;
   }
-  
+
+  h3 {
+    color: #3a4d2d;
+  }
+
   footer {
     text-align: center;
     padding: 1em;
@@ -191,7 +195,7 @@ body {
     opacity: 1;
   }
 
-  .banner-title {
+  /* .banner-title {
     position: absolute;
     bottom: 20px;
     left: 40px;
@@ -203,4 +207,4 @@ body {
     padding: 10px 20px;
     border-radius: 10px;
   }
-  
+   */
