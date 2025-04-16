@@ -194,11 +194,13 @@ body {
   .banner-title {
     position: absolute;
     bottom: 20px;
-    left: 20px;
-    color: white;
+    left: 40px;
+    color: #fdf4dc; 
     font-size: 3rem;
+    font-weight: bold;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
-    background-color: rgba(0, 0, 0, 0.4); /* donkere achtergrondbalk */
+    background-color: rgba(0, 51, 0, 0.7);
     padding: 10px 20px;
     border-radius: 10px;
   }
+  
