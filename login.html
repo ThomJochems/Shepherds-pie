@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Inloggen – Bladmuziek</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="login-page">
+    <h2>Alleen voor leden</h2>
+    <p>Voer het wachtwoord in om toegang te krijgen tot de bladmuziek.</p>
+    <input type="password" id="password" placeholder="Wachtwoord" />
+    <button onclick="checkPassword()">Inloggen</button>
+    <p id="error" style="color: red;"></p>
+  </main>
+
+  <script>
+    async function checkPassword() {
+      const input = document.getElementById("password").value;
+      const hashBuffer = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(input));
+      const hashArray = Array.from(new Uint8Array(hashBuffer));
+      const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+
+      const correctHash = "e0b19e9b54b090fcd7cfa22836f7d4baebc350cd1b729a85b92e39e2fbcfd99a";
+
+      if (hashHex === correctHash) {
+        window.location.href = "bladmuziek.html";
+      } else {
+        document.getElementById("error").textContent = "Onjuist wachtwoord";
+      }
+    }
+  </script>
+</body>
+</html>
