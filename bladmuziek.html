@@ -32,5 +32,25 @@
   <footer>
     &copy; 2025 Shepherd's Pie
   </footer>
+<script>
+  const correctHash = "a7a3c1607b006e301a6e233c0ee605b25e9bf9e49fd3b4f102459594afd235b6";
+
+  async function checkPassword() {
+    const input = document.getElementById("password-input").value;
+    const error = document.getElementById("error-message");
+
+    const msgUint8 = new TextEncoder().encode(input);
+    const hashBuffer = await crypto.subtle.digest('SHA-256', msgUint8);
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+
+    if (hashHex === correctHash) {
+      document.getElementById("login-section").style.display = "none";
+      document.getElementById("music-section").style.display = "block";
+    } else {
+      error.textContent = "Onjuist wachtwoord.";
+    }
+  }
+</script>
 </body>
 </html>
