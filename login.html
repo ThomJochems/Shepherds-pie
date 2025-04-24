@@ -33,7 +33,7 @@
       const hashArray = Array.from(new Uint8Array(hashBuffer));
       const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
 
-      const correctHash = "e0b19e9b54b090fcd7cfa22836f7d4baebc350cd1b729a85b92e39e2fbcfd99a";
+      const correctHash = "a7a3c1607b006e301a6e233c0ee605b25e9bf9e49fd3b4f102459594afd235b6";
 
       if (hashHex === correctHash) {
         window.location.href = "bladmuziek.html";
