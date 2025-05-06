@@ -197,46 +197,55 @@ body {
 
 /* Mobiele layout voor schermen kleiner dan 768px */
 @media (max-width: 768px) {
-header nav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
+  body {
+    font-size: 1rem;
+    padding: 1rem;
+  }
 
-.banner {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
+  header, nav, main, footer {
+    padding: 0.5rem;
+  }
 
-h1 {
-  font-size: 2rem;
-  padding: 0.5rem;
-}
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
 
-main {
-  padding: 1rem;
-}
+  nav a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem;
+  }
 
-iframe,
-audio,
-video {
-  width: 100%;
-}
+  .banner-title {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
 
-form input,
-form textarea,
-form button {
-  width: 100%;
-  box-sizing: border-box;
-}
+  img, iframe {
+    max-width: 100%;
+    height: auto;
+  }
 
-footer {
-  font-size: 0.9rem;
-  text-align: center;
-  padding: 1rem;
-}
+  form input,
+  form textarea,
+  form button {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .contact-info ul {
+    padding-left: 1rem;
+  }
+
+  .corner-logo {
+    width: 60px;
+    bottom: 10px;
+    right: 10px;
+  }
 }
 .gallery-grid {
   display: grid;
