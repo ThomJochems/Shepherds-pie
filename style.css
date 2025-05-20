@@ -40,10 +40,7 @@ body {
     opacity: 0.8;
     z-index: 1000;
   }
-  .corner-logo-1:hover,
-  .corner-logo-2:hover {
-  opacity: 1;
-  }
+
   nav {
     margin-top: 0.5em;
   }
