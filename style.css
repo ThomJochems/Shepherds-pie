@@ -262,6 +262,26 @@ body {
     height: auto;
   }
 
+  .corner-logo-1 {
+    position: relative;
+    right: 0px;
+    max-height: fit-content;
+    max-width: 100px;
+    width: 100px;
+    opacity: 0.8;
+    z-index: 1000;
+  }
+
+  .corner-logo-2 {
+    position: relative;
+    left: 164px;
+    max-height: fit-content;
+    max-width: 100px;
+    width: 100px; 
+    opacity: 0.8;
+    z-index: 1000;
+  }
+
   form input,
   form textarea,
   form button {
