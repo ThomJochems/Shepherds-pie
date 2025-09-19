@@ -23,7 +23,7 @@ body {
 
   .corner-logo-1 {
     position: relative;
-    right: 10px;
+    float: left;
     max-height: fit-content;
     max-width: 100px;
     width: 100px;
@@ -33,7 +33,7 @@ body {
 
   .corner-logo-2 {
     position: relative;
-    left: 1273px;
+    float:right;
     max-height: fit-content;
     max-width: 100px;
     width: 100px; 
@@ -264,7 +264,7 @@ body {
 
   .corner-logo-1 {
     position: relative;
-    right: 0px;
+    float: left;
     max-height: fit-content;
     max-width: 100px;
     width: 100px;
@@ -273,8 +273,8 @@ body {
   }
 
   .corner-logo-2 {
-  
-    left: 164px;
+    position: relative;
+    float:right;
     max-height: fit-content;
     max-width: 100px;
     width: 100px; 
