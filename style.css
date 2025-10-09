@@ -60,6 +60,14 @@ body {
     margin-bottom: 2rem;
   }
 
+  .intro h2 {
+    text-align: center;
+  }
+
+  .about h3 {
+    text-align: center;
+  }
+
   main {
     max-width: 800px;
     margin: auto;
