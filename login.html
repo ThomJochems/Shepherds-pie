@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Inloggen om toegang te krijgen tot het song boek van Shepherd's Pie. Alleen voor leden.">
+  <title>Inloggen Song boek</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="banner-title">Muziek</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="agenda.html">Agenda</a>
+            <a href="music.html">Muziek</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html">Song boek</a>
+        </nav>
+    </header>
+
+  <main class="login-page">
+    <h2>Alleen voor leden</h2>
+    <p>Voer het wachtwoord in om toegang te krijgen tot de bladmuziek.</p>
+    <input type="password" id="password" placeholder="Wachtwoord" />
+    <button onclick="checkPassword()">Inloggen</button>
+    <p id="error" style="color: red;"></p>
+  </main>
+
+  <script>
+    async function checkPassword() {
+      const input = document.getElementById("password").value;
+      const hashBuffer = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(input));
+      const hashArray = Array.from(new Uint8Array(hashBuffer));
+      const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+
+      const correctHash = "a7a3c1607b006e301a6e233c0ee605b25e9bf9e49fd3b4f102459594afd235b6";
+
+      if (hashHex === correctHash) {
+        window.location.href = "bladmuziek.html";
+      } else {
+        document.getElementById("error").textContent = "Onjuist wachtwoord";
+      }
+    }
+  </script>
+</body>
+</html>
