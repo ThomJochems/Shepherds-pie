@@ -27,19 +27,24 @@
       <h2>Neem contact op met Shepherd’s Pie</h2>
     
       <label for="name">Naam</label>
-      <input type="text" id="name" name="name" required>
+      <input type="text" id="name" name="name" autocomplete="name" minlength="2" maxlength="100" required>
     
       <label for="email">E-mailadres</label>
-      <input type="email" id="email" name="email" required>
+      <input type="email" id="email" name="email" autocomplete="email" maxlength="254" required>
     
       <label for="message">Bericht</label>
-      <textarea id="message" name="message" required></textarea>
+      <textarea id="message" name="message" minlength="10" maxlength="3000" required></textarea>
+
+      <!-- FormSubmit silently ignores submissions that fill this bot-only field. -->
+      <div class="honeypot" aria-hidden="true">
+        <label for="website">Laat dit veld leeg</label>
+        <input type="text" id="website" name="_honey" tabindex="-1" autocomplete="off">
+      </div>
     
       <button type="submit">Verzenden</button>
     
-      <!-- Verborgen velden -->
+      <!-- FormSubmit reCAPTCHA is enabled by default; do not add _captcha=false. -->
       <input type="hidden" name="_subject" value="Nieuw bericht via Shepherds Pie website">
-      <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_next" value="https://thomjochems.github.io/Shepherds-pie/bedankt.html" />
       <input type="hidden" name="_template" value="box">
       <input type="hidden" name="_cc" value="arietruusdeleeuwerk@gmail.com,hildaenad@hotmail.com,thomjochems@gmail.com"/> 
